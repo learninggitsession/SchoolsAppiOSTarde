@@ -14,9 +14,14 @@
 		070B7A92228B786B007E11AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070B7A90228B786B007E11AE /* LaunchScreen.storyboard */; };
 		070B7A9E228B78D3007E11AE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7A9D228B78D3007E11AE /* User.swift */; };
 		070B7AA1228B790D007E11AE /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AA0228B790D007E11AE /* UsersRepository.swift */; };
-		070B7AA3228B79A2007E11AE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AA2228B79A2007E11AE /* Errors.swift */; };
 		070B7AA5228B7A4D007E11AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AA4228B7A4D007E11AE /* HomeViewController.swift */; };
 		070B7AA7228B7C5C007E11AE /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AA6228B7C5C007E11AE /* UserServices.swift */; };
+		070B7AA9228B8AAB007E11AE /* ListSchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AA8228B8AAB007E11AE /* ListSchoolsViewController.swift */; };
+		070B7AAB228B8BFE007E11AE /* SchoolServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AAA228B8BFE007E11AE /* SchoolServices.swift */; };
+		070B7AAE228B8C25007E11AE /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AAD228B8C25007E11AE /* School.swift */; };
+		070B7AB0228B8C37007E11AE /* SchoolsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AAF228B8C37007E11AE /* SchoolsRepository.swift */; };
+		070B7AB3228B8CB1007E11AE /* PermissionErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AB2228B8CB1007E11AE /* PermissionErrors.swift */; };
+		070B7AB5228B8CC0007E11AE /* UserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B7AB4228B8CC0007E11AE /* UserErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +34,14 @@
 		070B7A93228B786B007E11AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B7A9D228B78D3007E11AE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		070B7AA0228B790D007E11AE /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
-		070B7AA2228B79A2007E11AE /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		070B7AA4228B7A4D007E11AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		070B7AA6228B7C5C007E11AE /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		070B7AA8228B8AAB007E11AE /* ListSchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSchoolsViewController.swift; sourceTree = "<group>"; };
+		070B7AAA228B8BFE007E11AE /* SchoolServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolServices.swift; sourceTree = "<group>"; };
+		070B7AAD228B8C25007E11AE /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		070B7AAF228B8C37007E11AE /* SchoolsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsRepository.swift; sourceTree = "<group>"; };
+		070B7AB2228B8CB1007E11AE /* PermissionErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionErrors.swift; sourceTree = "<group>"; };
+		070B7AB4228B8CC0007E11AE /* UserErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 			children = (
 				070B7A89228B7867007E11AE /* LoginViewController.swift */,
 				070B7AA4228B7A4D007E11AE /* HomeViewController.swift */,
+				070B7AA8228B8AAB007E11AE /* ListSchoolsViewController.swift */,
 				070B7A8B228B7867007E11AE /* Main.storyboard */,
 			);
 			path = Presentation;
@@ -89,8 +100,9 @@
 		070B7A9A228B78BD007E11AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				070B7AB1228B8CA2007E11AE /* Errors */,
 				070B7A9D228B78D3007E11AE /* User.swift */,
-				070B7AA2228B79A2007E11AE /* Errors.swift */,
+				070B7AAD228B8C25007E11AE /* School.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				070B7AA6228B7C5C007E11AE /* UserServices.swift */,
+				070B7AAA228B8BFE007E11AE /* SchoolServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -107,8 +120,18 @@
 			isa = PBXGroup;
 			children = (
 				070B7AA0228B790D007E11AE /* UsersRepository.swift */,
+				070B7AAF228B8C37007E11AE /* SchoolsRepository.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		070B7AB1228B8CA2007E11AE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				070B7AB2228B8CB1007E11AE /* PermissionErrors.swift */,
+				070B7AB4228B8CC0007E11AE /* UserErrors.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070B7AB3228B8CB1007E11AE /* PermissionErrors.swift in Sources */,
+				070B7AB5228B8CC0007E11AE /* UserErrors.swift in Sources */,
+				070B7AA9228B8AAB007E11AE /* ListSchoolsViewController.swift in Sources */,
+				070B7AAB228B8BFE007E11AE /* SchoolServices.swift in Sources */,
 				070B7A8A228B7867007E11AE /* LoginViewController.swift in Sources */,
-				070B7AA3228B79A2007E11AE /* Errors.swift in Sources */,
 				070B7AA7228B7C5C007E11AE /* UserServices.swift in Sources */,
 				070B7A88228B7867007E11AE /* AppDelegate.swift in Sources */,
 				070B7AA1228B790D007E11AE /* UsersRepository.swift in Sources */,
+				070B7AAE228B8C25007E11AE /* School.swift in Sources */,
 				070B7A9E228B78D3007E11AE /* User.swift in Sources */,
+				070B7AB0228B8C37007E11AE /* SchoolsRepository.swift in Sources */,
 				070B7AA5228B7A4D007E11AE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
