@@ -1,5 +1,5 @@
 //
-//  Errors.swift
+//  UserErrors.swift
 //  SchoolsAppiOS
 //
 //  Created by Carlos Eduardo Millani on 14/05/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Errors: Error {
+enum UserErrors: Error {
     case userNotFound
 }
