@@ -137,6 +137,13 @@
                                     <constraint firstAttribute="height" constant="128" id="rtk-gO-Vwh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ec-at-iEA">
+                                <rect key="frame" x="167" y="630" width="80" height="30"/>
+                                <state key="normal" title="Ver Escolas"/>
+                                <connections>
+                                    <action selector="didTapListShools:" destination="W3x-wj-Pmx" eventType="touchUpInside" id="TI3-EW-FB8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -145,6 +152,8 @@
                             <constraint firstItem="xif-gg-6pW" firstAttribute="centerX" secondItem="Lau-81-dpg" secondAttribute="centerX" id="KM0-4o-zsf"/>
                             <constraint firstItem="paW-6q-RYN" firstAttribute="centerX" secondItem="Lau-81-dpg" secondAttribute="centerX" id="NBf-q2-a1Z"/>
                             <constraint firstItem="paW-6q-RYN" firstAttribute="width" secondItem="jdS-Pa-4wh" secondAttribute="width" id="jkO-Wo-IvV"/>
+                            <constraint firstItem="9Ec-at-iEA" firstAttribute="centerX" secondItem="xif-gg-6pW" secondAttribute="centerX" id="ffx-AK-BNP"/>
+                            <constraint firstItem="9Ec-at-iEA" firstAttribute="top" secondItem="xif-gg-6pW" secondAttribute="bottom" constant="131" id="pH2-wG-6GQ"/>
                             <constraint firstItem="xif-gg-6pW" firstAttribute="centerY" secondItem="Lau-81-dpg" secondAttribute="centerY" id="zWL-T5-aHc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lau-81-dpg"/>
@@ -152,11 +161,49 @@
                     <navigationItem key="navigationItem" title="Home" id="cRm-qw-tuB"/>
                     <connections>
                         <outlet property="helloLabel" destination="xif-gg-6pW" id="HzF-FC-VcU"/>
+                        <segue destination="DV2-Vz-YTx" kind="show" identifier="listSchools" id="NIY-c0-CEs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUY-dq-AaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1378" y="86"/>
+        </scene>
+        <!--List Schools View Controller-->
+        <scene sceneID="Q6x-0U-guM">
+            <objects>
+                <tableViewController id="DV2-Vz-YTx" customClass="ListSchoolsViewController" customModule="SchoolsAppiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="t7D-Je-6TD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" textLabel="o29-LT-53M" style="IBUITableViewCellStyleDefault" id="aLB-cJ-3cj">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aLB-cJ-3cj" id="AWt-Ba-BwG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o29-LT-53M">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DV2-Vz-YTx" id="x3W-Ot-LU3"/>
+                            <outlet property="delegate" destination="DV2-Vz-YTx" id="M5D-Ts-Hty"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlB-Y0-ahV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2296" y="86"/>
         </scene>
     </scenes>
 </document>
