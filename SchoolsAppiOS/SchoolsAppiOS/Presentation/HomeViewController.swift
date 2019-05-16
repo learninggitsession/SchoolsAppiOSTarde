@@ -17,6 +17,18 @@ class HomeViewController: UIViewController {
         self.currentUser = user
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "listSchools" {
+            guard let listSchoolsViewController: ListSchoolsViewController = segue
+                .destination as? ListSchoolsViewController,
+                let user: User = sender as? User else {
+                    return
+            }
+            
+            listSchoolsViewController.injectDependencies(user: user)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setupUI()
@@ -24,5 +36,9 @@ class HomeViewController: UIViewController {
     
     private func setupUI() {
         self.helloLabel.text = self.currentUser?.name ?? "Olá!"
+    }
+    
+    @IBAction func didTapListShools(_ sender: Any) {
+        self.performSegue(withIdentifier: "listSchools", sender: self.currentUser)
     }
 }
