@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  SchoolsAppiOS
 //
 //  Created by Carlos Eduardo Millani on 14/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     var userServices: UserServices = UserServices()
 
