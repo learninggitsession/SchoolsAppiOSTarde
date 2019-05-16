@@ -15,7 +15,7 @@ class UsersRepository {
         } else if username == "cadu" {
             return User(name: "Cadu", username: username)
         } else {
-            throw Errors.userNotFound
+            throw UserErrors.userNotFound
         }
     }
 }
